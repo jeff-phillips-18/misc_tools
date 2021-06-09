@@ -1,0 +1,15 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: ods-admin
+  namespace: redhat-ods-applications
+  uid: d3e25b91-528f-46a1-b81f-795f95e9e552
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: rhodsadmin
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+
